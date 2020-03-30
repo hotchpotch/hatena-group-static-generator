@@ -22,15 +22,15 @@ export default ({ children }) => {
                     {data.site.siteMetadata.title}
                 </Link>
             </h1>
-            <div class="hatena-body">
-                <div class="calendar" id="pager-top">
-                    <a rel="prev" href="/" class="prev">&lt;前の5日分</a><span id="edit-in-place-add"></span>
+            <div className="hatena-body">
+                <div className="calendar" id="pager-top">
+                    <a rel="prev" href="/" className="prev">&lt;前の5日分</a><span id="edit-in-place-add"></span>
                 </div>
                 <div id="days">
                     {children}
                 </div>
-                <div class="calendar" id="pager-bottom">
-                    <a rel="prev" href="/" class="prev">&lt;前の5日分</a>
+                <div className="calendar" id="pager-bottom">
+                    <a rel="prev" href="/" className="prev">&lt;前の5日分</a>
                 </div>
             </div>
         </>

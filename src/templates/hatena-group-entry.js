@@ -6,12 +6,12 @@ export default ({ data }) => {
   const { id, content, title, date } = data.hatenaGroupContent;
   return (
     <Layout>
-      <div class="day">
-        <h2><Link to={`/${id}`}><span class="date">{date}</span></Link></h2>
-        <div class="body" dangerouslySetInnerHTML={{ __html: content }} />
+      <div className="day">
+        <h2><Link to={`/${id}`}><span className="date">{date}</span></Link></h2>
+        <div className="body" dangerouslySetInnerHTML={{ __html: content }} />
 
-        <div class="comment">
-          <div class="caption"><a href="#c">コメントは書けません</a></div>
+        <div className="comment">
+          <div className="caption"><a href="#c">コメントは書けません</a></div>
         </div>
       </div>
     </Layout>
