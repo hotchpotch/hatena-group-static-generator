@@ -3,10 +3,13 @@ import { Helmet } from "react-helmet"
 import { graphql, Link } from "gatsby"
 
 import Layout from "../components/Layout"
+import Comment from "../components/Comment"
 
 export default ({ data }) => {
-  const { id, content, title, date } = data.hatenaGroupContent;
+  const { id, content, title, date, comments } = data.hatenaGroupContent;
   const headTitle = `${title} - ${data.site.siteMetadata.title}`
+  console.log(comments);
+
   return (
     <Layout>
       <Helmet>
@@ -19,6 +22,9 @@ export default ({ data }) => {
 
         <div className="comment">
           <div className="caption"><a href="#c">コメントは書けません</a></div>
+          <div class="commentshort">
+            {comments.map((comment, index) => <Comment key={index} {...comment} />)}
+          </div>
         </div>
       </div>
     </Layout>
@@ -32,6 +38,11 @@ export const query = graphql`
       date(formatString: "YYYY-MM-DD")
       title
       content
+      comments {
+        author
+        date(formatString: "YYYY-MM-DD HH:mm")
+        text
+      }
     }
 
     site {
