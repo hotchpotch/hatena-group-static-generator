@@ -6,6 +6,13 @@
 
 module.exports = {
   plugins: [
-    'gatsby-plugin-eslint'
+    'gatsby-plugin-eslint',
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/hatena-group-exports/`,
+        name: `hatena-group`,
+      },
+    },
   ]
 }
