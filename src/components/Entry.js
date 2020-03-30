@@ -12,7 +12,7 @@ export default ({ id, content, date, comments }) => {
 
             <div className="comment" id={commentsId}>
                 <div className="caption"><a href={"#" + commentsId}>コメントは書けません</a></div>
-                <div class="commentshort">
+                <div className="commentshort">
                     {comments.map((comment, index) => <Comment key={index} {...comment} commentId={commentsId + '-' + index} />)}
                 </div>
             </div>

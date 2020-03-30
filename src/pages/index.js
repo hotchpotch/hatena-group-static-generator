@@ -1,46 +1,43 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
+import Layout from "../components/Layout";
+import Entry from "../components/Entry";
+import Helmet from "react-helmet";
 
-export default ({ data }) => {
-    return (
-        <div>
-            <h1>
-                SubTech
-        </h1>
-            <h4>{data.allHatenaGroupContent.totalCount} Posts</h4>
-            {data.allHatenaGroupContent.edges.map(({ node }) => (
-                <div key={node.id}>
-                    <Link
-                        to={"/" + node.id}
-                    >
-                        <h3
-                        >
-                            {node.title}{" "}
-                            <span >
-                                — {node.date}
-                            </span>
-                        </h3>
-                        <p>{node.text.substring(0, 80)}</p>
-                    </Link>
-                </div>
-            ))}
-        </div>
-    )
-}
-
-export const query = graphql`
+export default () => {
+    // XXX: limit のセット
+    const data = useStaticQuery(graphql`
 query {
-  allHatenaGroupContent(sort: { fields: [date], order: DESC }) {
-    totalCount
-    edges {
-      node {
-        id
-        date(formatString: "YYYYDDMM")
+    site {
+      siteMetadata {
         title
-        text
-        content
       }
     }
-  }
+    allHatenaGroupContent(sort: { fields: [date], order: DESC }, limit: 5) {
+        totalCount
+        edges {
+        node {
+            id
+            date(formatString: "YYYY-MM-DD")
+            title
+            content
+            comments {
+                author
+                date(formatString: "YYYY-MM-DD HH:mm")
+                text
+            }
+        }
+        }
+    }
+    }`);
+    return (
+        <Layout>
+            <Helmet>
+                <title>{data.site.siteMetadata.title}</title>
+            </Helmet>
+            {data.allHatenaGroupContent.edges.map(({ node }) =>
+                <Entry key={node.id} {...node} />
+            )}
+        </Layout >
+    )
 }
-`
