@@ -6,7 +6,8 @@
 
 module.exports = {
   siteMetadata: {
-    title: `Hatena::Group::SubTech::secondlife`,
+    title: `Hatena::Group::SubTech id:secondlife`,
+    groupName: 'subtech',
   },
   plugins: [
     'gatsby-plugin-eslint',
