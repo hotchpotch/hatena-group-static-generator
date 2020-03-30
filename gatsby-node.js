@@ -1,8 +1,32 @@
+const path = require(`path`)
 const mtParser = require('mt-parser');
 const HTMLParser = require('node-html-parser');
 const { htmlUnescape } = require('escape-goat');
 
-exports.createPages = () => { }
+exports.createPages = async ({ graphql, actions }) => {
+    const { createPage } = actions
+    const result = await graphql(`
+    query {
+      allHatenaGroupContent {
+        edges {
+          node {
+            id
+          }
+        }
+      }
+    }
+  `)
+
+    result.data.allHatenaGroupContent.edges.forEach(({ node }) => {
+        createPage({
+            path: '/' + node.id,
+            component: path.resolve(`./src/templates/hatena-group-entry.js`),
+            context: {
+                id: node.id,
+            },
+        })
+    })
+}
 
 exports.onCreateNode = async (
     { node, actions, loadNodeContent, createContentDigest }
