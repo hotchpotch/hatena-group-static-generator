@@ -22,7 +22,7 @@ export const query = graphql`
   query($id: String!) {
     hatenaGroupContent(id: { eq: $id }) {
       id
-      date(formatString: "YYYY-DD-MM")
+      date(formatString: "YYYY-MM-DD")
       title
       content
     }
