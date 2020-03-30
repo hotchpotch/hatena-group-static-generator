@@ -17,13 +17,21 @@ export default ({ children }) => {
     return (
         <>
             <SimpleHeader />
-            <div>
+            <h1>
                 <Link to={`/`}>
-                    <h3>
-                        {data.site.siteMetadata.title}
-                    </h3>
+                    {data.site.siteMetadata.title}
                 </Link>
-                {children}
+            </h1>
+            <div class="hatena-body">
+                <div class="calendar" id="pager-top">
+                    <a rel="prev" href="/" class="prev">&lt;前の5日分</a><span id="edit-in-place-add"></span>
+                </div>
+                <div id="days">
+                    {children}
+                </div>
+                <div class="calendar" id="pager-bottom">
+                    <a rel="prev" href="/" class="prev">&lt;前の5日分</a>
+                </div>
             </div>
         </>
     )

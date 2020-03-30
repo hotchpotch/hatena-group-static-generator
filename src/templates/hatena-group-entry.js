@@ -1,15 +1,18 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Layout from "../components/Layout"
 
 export default ({ data }) => {
-  const html = data.hatenaGroupContent.content
-  const title = data.hatenaGroupContent.title
+  const { id, content, title, date } = data.hatenaGroupContent;
   return (
     <Layout>
-      <div>
-        <h1>{title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: html }} />
+      <div class="day">
+        <h2><Link to={`/${id}`}><span class="date">{date}</span></Link></h2>
+        <div class="body" dangerouslySetInnerHTML={{ __html: content }} />
+
+        <div class="comment">
+          <div class="caption"><a href="#c">コメントは書けません</a></div>
+        </div>
       </div>
     </Layout>
   )
@@ -19,7 +22,7 @@ export const query = graphql`
   query($id: String!) {
     hatenaGroupContent(id: { eq: $id }) {
       id
-      date(formatString: "YYYYDDMM")
+      date(formatString: "YYYY-DD-MM")
       title
       content
     }
