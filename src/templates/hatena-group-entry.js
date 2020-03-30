@@ -1,11 +1,18 @@
 import React from "react"
+import { Helmet } from "react-helmet"
 import { graphql, Link } from "gatsby"
+
 import Layout from "../components/Layout"
 
 export default ({ data }) => {
   const { id, content, title, date } = data.hatenaGroupContent;
+  const headTitle = `${title} - ${data.site.siteMetadata.title}`
   return (
     <Layout>
+      <Helmet>
+        <title>{headTitle}</title>
+      </Helmet>
+
       <div className="day">
         <h2><Link to={`/${id}`}><span className="date">{date}</span></Link></h2>
         <div className="body" dangerouslySetInnerHTML={{ __html: content }} />
@@ -25,6 +32,12 @@ export const query = graphql`
       date(formatString: "YYYY-MM-DD")
       title
       content
+    }
+
+    site {
+      siteMetadata {
+        title
+      }
     }
   }
 `
