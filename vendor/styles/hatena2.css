@@ -1,0 +1,1081 @@
+@charset "euc-jp";
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background: #6d819c;
+  text-align: center;
+}
+
+form {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  border: none;
+}
+
+a {
+  color: #0022cc;
+}
+
+a:visited {
+  color: #7888dc;
+}
+
+textarea, input {
+  padding: 3px;
+}
+
+input {
+ *padding: 0;
+ _padding: 0;
+  line-height: 1;
+}
+
+input[type="button"], input[type="submit"] {
+  padding: 1px;
+}
+
+div.adminmenu {
+  margin: 0 auto;
+  line-height: 200%;
+  height: 28px;
+  width: 90%;
+  max-width: 910px;
+  background: #5e7cb4;
+  font-size: 80%;
+  text-align: right;
+  border-right: 1px solid #4a5973;
+  border-left: 1px solid #4a5973;
+}
+
+div.adminmenu a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-right: 5px;
+}
+
+div.adminmenu a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  color: #ffffff;
+  margin: 0px auto;
+  padding: 65px 0 65px 0;
+  background: #7697d6;
+  text-align: left;
+  font-size: 150%;
+  text-indent: 20px;
+  font-family: "times new roman", "geogia", serif;
+  width: 90%;
+  max-width: 910px;
+  border-right: 1px solid #4a5973;
+  border-left: 1px solid #4a5973;
+}
+
+h1 a, h1 a:visited {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+h1 a:hover {
+  text-decoration: underline;
+}
+
+.hatena-body {
+  margin: 0 auto;
+  background: #fff;
+  text-align: left;
+  zoom:1;
+  width: 90%;
+  max-width: 910px;
+  line-height: 1.5;
+  border-right: 1px solid #4a5973;
+  border-left: 1px solid #4a5973;
+}
+
+.hatena-body:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.main {
+  text-align: left;
+  background: #fff;
+  float: left;
+  width: 100%;
+}
+
+.sidebar {
+  line-height: 1.5;
+  width: 220px;
+  float: right;
+  margin-left: -222px;
+ _margin-left: -220px;
+ *margin-left: -220px;
+  border-left: 1px solid #a5bce7;
+  border-bottom: 1px solid #a5bce7;
+  overflow: hidden;
+}
+
+a.keyword {
+  color: #333;
+  text-decoration: none;
+  border-bottom: 1px solid #dedede;
+}
+
+a.okeyword {
+  color: #333;
+  text-decoration: none;
+  border-bottom: 1px dotted #dedede;
+}
+
+.main div.calendar, .main div.day{
+  margin-right: 235px;
+} 
+
+div.calendar {
+  padding: 15px 20px 0 20px;
+  font-size: 90%;
+  line-height: 150%;
+  text-align: right;
+}
+
+.day {
+  padding: 0 15px 2em 20px;
+  clear: both;
+}
+
+.day h2 {
+  margin: 0 0 10px 0;
+  font-size: 130%;
+  font-family: "times new roman", "geogia", serif;
+  padding: 25px 0.5em 0.2em 0;
+  line-height: 100%;
+  color: #7697d6;
+  border-bottom: 1px solid #a5bce7;
+}
+
+.day h2 a {
+  color: #7697d6;
+  text-decoration: none;
+}
+
+.day h2 .edit {
+  font-size: 75%;
+  font-weight: normal;
+  margin-left: 5px;
+}
+
+.day h2 .title {
+  margin-left: 0.5em;
+}
+
+
+.day h2 span.title input , .day h2 span.date input {
+  border: 1px solid #ccc;
+}
+
+.day .photo {
+  float: right;
+  margin: 0.8em 0 1em 1em;
+}
+
+.body {
+  padding-bottom: 0.3em;
+  width: 100%;
+  overflow: hidden;
+}
+
+.body h3 {
+  font-size: 100%;
+  margin: 0.4em 0 1em 0;
+}
+
+.body h3 .timestamp {
+  font-weight: normal;
+  font-size: 80%;
+  margin-right: 2px;
+}
+
+.body h3 a {
+  text-decoration: none;
+}
+
+.body h3 a .sanchor {
+  color: #7697d6;
+  padding-right: 0.3em;
+}
+
+.body h3 a.sectioncategory {
+  color: #333;
+  text-decoration: underline;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.body h3 img {
+  vertical-align: middle;
+  margin-bottom: 5px !important;
+}
+
+.body h3.title {
+  border-left: 9px solid #7697D6;
+  padding-left: 10px;
+  margin-bottom: 0;
+  padding-top: 5px;
+  padding-bottom: 0;
+}
+
+.body h3.title a {
+  text-decoration: none;
+  color: #333;
+}
+
+h3.hover {
+  border-color: #6384CC !important;
+  background: #F5F8FF;
+}
+
+.body .section p.sectionheader {
+  margin: 0 0 15px 0;
+  padding: 0 0 0 12px;
+  text-align: left;
+  font-size: 80%;
+  position: relative;
+  line-height: 1.5;
+  vertical-align: top;
+  color: #999;
+  border-left: 9px solid #7697D6;
+}
+
+.body p.sectionheader * {
+  vertical-align: middle;
+}
+
+
+.body h4 {
+  border-bottom: 1px dotted #a5bce7;
+  padding: 3px;
+  margin:1em 0 0.5em 0;
+}
+
+.body h5 {
+  margin: 0.5em 0;
+  font-size: 100%;
+}
+
+.body .section {
+  margin: 0;
+  padding-bottom: 1em;
+}
+
+.body .section p {
+  margin:0.6em 0 0.6em 0;
+}
+
+.body .section ul, .body .section ol {
+}
+
+.body .section ul li, .body .section ol li {
+}
+
+.body .section pre {
+  font-size: 90%;
+  background: #e9eff8;
+  border: 1px solid #d2deee;
+  padding: 0.5em 0.8em;
+ _padding-bottom:25px;
+ *padding-bottom:25px;
+  color: #555;
+ _width: 100%;
+ *width: 100%;
+  overflow: auto;
+  overflow-y: hidden;
+}
+
+.body .section blockquote {
+  border: 1px solid #d2deee;
+  margin: 1em 0;
+  padding: 0.5em;
+}
+
+.body .section blockquote p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.body .section blockquote cite {
+  margin-top: 0.5em;
+  margin-bottom: -0.3em;
+  display: block;
+  font-size: 90%;
+}
+
+.body .section table {
+  border-collapse: collapse;
+  font-size: 90%;
+  margin: 1em 0;
+}
+
+.body .section table td, .body .section table th {
+  padding: 5px;
+}
+
+.body .section table th {
+  background: #e9eff8;
+  border: 1px solid #d2deee;
+}
+
+.body .section table td {
+  border: 1px solid #d2deee;
+}
+
+.body .section table.hatena-question-detail {
+  margin-top: 0;
+  width: 560px;
+}
+
+.body .section table.hatena-question-detail td.hatena-question-detail-label {
+  width: 250px;
+}
+
+.body .section table.hatena-question-detail td.hatena-question-detail-value {
+  white-space: nowrap;
+}
+
+.body .section .hatena-asin-detail {
+  margin: 1em 0;
+  font-size: 90%;
+  padding: 0.8em 0.6em;
+  border: 1px solid #d2deee;
+}
+
+.body .section .hatena-asin-detail .hatena-asin-detail-image {
+  float: left;
+  margin-right: 15px;
+}
+
+.body .section .hatena-asin-detail .hatena-asin-detail-title {
+  margin-top: 0;
+  font-weight: bold;
+}
+
+.body .section .hatena-asin-detail p {
+  text-indent: 0;
+}
+
+.body .section .hatena-asin-detail ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.body .section .hatena-asin-detail .hatena-asin-detail-foot {
+  clear: left;
+}
+
+.body .section dl {
+  margin: 1em 0;
+}
+
+.body .section dt {
+  font-weight: bold;
+  padding-bottom: 3px;
+}
+
+.body .section dd {
+  padding-bottom: 6px;
+  margin-left: 1em;
+}
+
+.ad {
+  padding: 15px;
+}
+
+.body .ad {
+  padding: 0;
+}
+
+.highlight {
+  background: #fff06e;
+  padding: 0 0.3em;
+}
+
+.body p.footnote {
+  font-size: 90%;
+  margin: 1em 0;
+}
+
+.body .sectionfooter {
+  text-align: right;
+  clear: both;
+} 
+
+.body textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  height: 28em;
+}
+
+.body input, .body select {
+}
+
+.keywordcloud {
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar table.calendar {
+  font-size: 90%;
+  width: 198px;
+  border-collapse: collapse;
+  margin-top: 7px;
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
+
+.sidebar table.calendar td {
+  text-align: center;
+  padding: 2px;
+  border: 1px solid #e5ebfa;
+  background: #fff;
+}
+
+.sidebar table.calendar td a {
+  text-decoration: none;
+}
+
+.sidebar table.calendar td a:hover {
+}
+
+.sidebar table.calendar td img {
+  width: 15px;
+  height: 15px;
+}
+
+.sidebar table.calendar td.calendar-prev-month, .sidebar table.calendar td.calendar-next-month, .sidebar table.calendar td.calendar-current-month {
+  padding: 4px 0;
+  background: transparent;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+}
+
+.sidebar table.calendar td.calendar-prev-month a, .sidebar table.calendar td.calendar-next-month a, .sidebar table.calendar td.calendar-current-month a {
+}
+
+.sidebar table.calendar td.calendar-prev-month {
+  text-align: right;
+}
+
+.sidebar table.calendar td.calendar-next-month {
+  text-align: left;
+}
+
+.sidebar table.calendar td.calendar-weekday {
+  background: #e9eff8;
+}
+
+.sidebar table.calendar td.calendar-sunday {
+  background: #f9eded;
+}
+
+.sidebar table.calendar td.calendar-saturday {
+  background: #e9f7fd left;
+}
+
+.sidebar table.calendar td.calendar-day a {
+  display: block;
+}
+
+.sidebar table.calendar td.day-today {
+  background: #e5ebfa;
+}
+
+.sidebar table.calendar td.day-selected {
+  font-weight: bold;
+}
+
+
+.hatena-module {
+}
+
+.hatena-module .hatena-moduletitle {
+  padding: 3px 0.5em 3px 0.7em;
+  font-family: "times new roman", "geogia", serif;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 100%;  
+  background: #a5bce7;
+  text-align: center;
+}
+
+.hatena-module .hatena-moduletitle a {
+  color: #ffffff;
+}
+
+
+.hatena-module .hatena-modulebody {
+  padding: 7px;
+  zoom:1;
+}
+
+.hatena-modulebody:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.hatena-module ul, .sidebar .hatena-module ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 90%;
+}
+
+.hatena-module ul.keywordcloud {
+  margin-left: 0;
+}
+
+.hatena-module ul li, .hatena-module ol li{
+  padding-bottom: 3px;
+  padding-left: 2px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #e5ebfa;
+  line-height: 1.3;
+}
+
+.hatena-module ul li a,.hatena-module ol li a {
+  text-decoration: none;
+}
+
+.hatena-module ul.hatena-photo {
+  margin: 0;
+  padding: 0;
+}
+
+.hatena-module ul.hatena-photo li {
+  display: inline;
+  border-bottom: 0;
+}
+
+.hatena-module ul.hatena-photo li img {
+  margin: 2px 2px 4px 2px;
+  vertical-align: middle;
+}
+
+.hatena-module dl {
+  margin: 0;
+  padding: 0;
+  font-size: 90%;
+  line-height: 1.3;
+}
+
+.hatena-module dl a {
+  text-decoration: none;
+}
+
+.hatena-module dt {
+  padding-left: 3px;
+}
+
+.hatena-module dd {
+  margin-left: 0;
+  margin-bottom: 5px;
+  padding-bottom: 6px;
+  padding-left: 3px;
+  border-bottom: 1px solid #e5ebfa;
+}
+
+.hatena-module p {
+  margin: 0;
+}
+
+.hatena-module .hatena-profile {
+  font-size: 90%;
+  line-height: 135%;
+}
+
+.hatena-module .hatena-profile .hatena-profile-id {
+  padding-bottom: 0.2em;
+  font-weight: bold;
+}
+
+.hatena-module .hatena-profile .hatena-profile-id a {
+  font-family: "times new roman", "geogia", serif;
+  text-decoration: none;
+}
+
+.hatena-module .hatena-profile-image img {
+  float: left;
+  margin: 5px 10px 5px 5px;
+}
+
+.sidebar .hatena-module form {
+  font-size: 90%;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar .hatena-module form input, .sidebar .hatena-module form select {
+  border: 1px solid #ccc;
+  margin: 5px 5px 5px 0;
+  vertical-align: middle;
+  background: #fff;
+}
+
+.sidebar .hatena-module form select {
+  margin-right: 0;
+}
+
+.recentitem {
+  padding: 3px 0.5em 3px 0.7em;
+  font-family: "times new roman", "geogia", serif;
+  color: #ffffff;
+  font-weight: bold;
+  background: #a5bce7;
+  text-align: center;
+  margin-top: 0;
+}
+
+.recentitem a {
+  color: #ffffff;
+}
+
+.recentsubtitles {
+  padding: 0 0 10px 10px;
+  margin: 0;
+  font-size: 90%;
+}
+
+.recentitem_diary {
+  padding: 10px 20px;
+}
+
+.recentsubtitles img {
+  vertical-align: middle;
+}
+
+div.comment, div.refererlist {
+  margin: 0;
+  clear: both;
+  border: 1px solid #a5bce7;
+  background: #ffffff;
+}
+
+.comment .caption, .refererlist .caption {
+  margin: 0 0 7px 0;
+  padding: 3px 0.5em 3px 0.7em;
+  background: #a5bce7;
+  color: #ffffff;
+}
+
+.comment .caption a, .refererlist .caption a {
+  color: #ffffff;
+}
+
+.comment .commentshort {
+  padding: 0 7px 7px 7px;
+}
+
+.comment .commentshort p {
+  margin: 0 0 4px 0;
+  padding-bottom: 3px;
+  padding-left: 3px;
+  border-bottom: 1px solid #e5ebfa;
+  font-size: 90%;
+  line-height: 1.3;
+}
+
+.comment .commentshort p a {
+  text-decoration: none;
+}
+
+.comment .commentshort p .canchor a {
+  color: #333;
+}
+
+.comment textarea {
+  border: 1px solid #ccc;
+  margin: 0.5em 0;
+  width: 100%;
+}
+
+.comment input.field {
+  background: #fff;
+  border: 1px solid #ccc;
+}
+
+.comment span.commentator input {
+  background: #fff;
+  border: 1px solid #ccc;
+}
+
+div.refererlist {
+  border-top: 0;
+}
+
+.refererlist ul {
+  list-style: none;
+  margin: 0;
+  padding: 0 7px 7px 7px;
+  font-size: 90%;
+}
+
+.refererlist ul li {
+  margin-bottom: 4px;
+  padding-bottom: 3px;
+  padding-left: 3px;
+  border-bottom: 1px solid #e5ebfa;
+  line-height: 1.3;
+}
+
+.refererlist ul li a {
+  text-decoration: none;
+}
+
+.refererlist ul li input {
+  vertical-align: middle;
+  margin-left: 0;
+}
+
+.refererlist input {
+  margin-left: 10px;
+  margin-bottom: 6px;
+}
+
+#hatena-about {
+}
+
+#hatena-about h2 {
+  margin-top: 0;
+  padding-top: 1em;
+}
+
+#hatena-about h2 a {
+  font-weight: normal;
+  margin-left: 5px;
+}
+
+#hatena-about h3 {
+  padding-top: 0.5em;
+}
+
+#hatena-about ul {
+  margin: 1em;
+  padding: 0;
+}
+
+#hatena-about .hatena-profile-list {
+  margin: 1em 0;
+  padding: 0;
+}
+
+#hatena-about .hatena-profile-list li {
+  display: inline;
+}
+
+.sidebar .hatena-clock {
+  text-align: center;
+  padding: 0.5em;
+}
+
+.footer {
+  padding: 1em;
+  clear: both;
+  font-size:80%;
+}
+
+div.contents {
+  border: 1px solid #DDD;
+  margin-top: 1em;
+  margin-left: 1em;
+  color: #333;
+}
+
+div.contents ul {
+  list-style: circle;
+  margin-bottom: 0.5em;
+}
+
+
+p.message {
+  margin: 0;
+}
+
+
+a.file {
+  padding-left: 17px;
+  margin-left: 2px;
+  margin-right: 2px;
+  background: url("http://www.hatena.ne.jp/images/common/icon-download.gif") 0 50% no-repeat;
+}
+
+#simple-header {
+  margin: 0px auto 0 auto;
+  width: 90%;
+  max-width: 910px;
+  border-right: 1px solid #4a5973;
+  border-left: 1px solid #4a5973;
+}
+
+/* GROUP STYLE 071002 */
+
+#breadcrumbs {
+  text-align: left;
+  background: #7697d6;
+  width: 90%;
+  max-width: 910px;
+  margin:0 auto;
+  padding: 5px 0 !important;
+  color: #fff;
+  border-left: 1px solid #4a5973;
+  border-right: 1px solid #4a5973;
+  text-indent: 1em;
+}
+
+#breadcrumbs a{
+  margin: 0 5px;
+  color: #fff;
+}
+
+#breadcrumbs input{
+  background: transparent;
+  color: #fff;
+  border: 1px solid #a5bce7 !important;
+  padding: 0;
+}
+
+#hatena-group-topictree .day{
+  padding-top: 20px;
+}
+
+#hatena-group-topictree ul.topic-tree-leaf {
+  margin-top: 0;
+}
+
+#hatena-group-topictree ul.topic-tree-leaf ul,ul.topic-tree-leaf ul ul,ul.topic-tree-leaf ul ul ul,ul.topic-tree-leaf ul ul ul ul,ul.topic-tree-leaf ul ul ul ul ul{
+  padding-top: 0;
+}
+
+#hatena-group-topictree div.description {
+  font-size: 80%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#hatena-group-topictree ul.topic-tree-leaf li a{
+  margin: 0;
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+#hatena-group-topictree #hatena-group-topictree ul.topic-tree-leaf li a.topic-tree-username{
+  font-weight: normal;
+}
+
+#hatena-group-topictree ul.topic-tree-leaf li img {
+  vertical-align: middle;
+  margin-bottom: 3px;
+}
+
+#hatena-group-topictree ul.topic-tree-leaf li ul li a{
+  font-weight: normal;
+}
+
+#hatena-group-task h1 {
+  padding: 65px 0 65px 0;
+  background: #7697d6;
+}
+
+#hatena-group-task .ashikamenu {
+  font-size: 80%;
+}
+
+#hatena-group-task .ashikamenu img {
+  vertical-align: middle;
+  margin-bottom: 3px;
+  margin-right: 2px;
+  font-size: 80%;
+}
+
+#hatena-group-task h2 {
+  line-height: 1.35;
+}
+
+#hatena-group-task h2 input {
+  padding: 0;
+  vertical-align: middle;
+  margin-bottom: 2px;
+}
+
+#hatena-group-bbs div.bbsad{
+  margin-left:0;
+  padding-left:1em;
+  padding-top:1em;
+}
+
+#hatena-group-bbs div#bbsheader {
+  margin:0;
+  padding:0 1em;
+}
+
+#hatena-group-bbs #bbsheader div.bbsmode {
+  padding-top:0.5em;
+  margin:0;
+}
+
+#hatena-group-bbs .calendar {
+  text-align:left;
+}
+
+#hatena-group-bbs div.articlelist {
+  border:1px solid #a5bce7;
+  margin-top:1em;
+  font-size:90%;
+  padding:0.3em;
+}
+
+#hatena-group-calendar .group-calendar{
+  padding-top:1em;
+  text-align:center;
+  width:100%;
+}
+
+#hatena-group-calendar .group-calendar table{
+  border-collapse:collapse;
+  width:95%;
+  margin:0 auto;
+  text-align:left;
+}
+
+#hatena-group-calendar .group-calendar table tr th{
+  background:#DFDFDF;
+}
+
+#hatena-group-calendar .group-calendar table tr th.calendar-sunday{
+  background:#EBD9D9;
+  color:#333;
+}
+
+#hatena-group-calendar .group-calendar table tr th.calendar-saturday{
+  background:#D3EAF2;
+  color:#333;
+}
+
+#hatena-group-calendar .group-calendar table tr td{
+  line-height:1.35;
+}
+
+#hatena-group-calendar .group-calendar table tr td,#hatena-group-calendar .group-calendar table tr th{
+  border:1px solid #CCD4E7;
+}
+
+#hatena-group-calendar .group-calendar table tr.pager td {
+  border:0;
+  padding-bottom:5px;
+}
+
+#hatena-group-calendar .group-calendar table tr td h2{
+  border-bottom:1px solid #CCD4E7;
+  padding:3px;
+  background:#efefef;
+}
+
+#hatena-group-calendar .group-calendar table tr td h2.holiday {
+  background:#f9eded;
+}
+
+#hatena-group-calendar .group-calendar table tr td h2.saturday {
+  background:#e9f7fd;
+}
+
+#hatena-group-calendar .group-calendar table tr td h2 a{
+  text-decoration:none;
+}
+
+#hatena-group-calendar .group-calendar table tr td h3{
+  font-size:100%;
+  margin:7px 5px;
+}
+
+#hatena-group-calendar .group-calendar table tr td h3 a{
+  color:#7697d6;
+  text-decoration:none;
+}
+
+/* adsense */
+
+.google_color_text { color:#333333; }
+.google_color_link { color:#0000ff; }
+.google_color_url { color:#333333; }
+.google_color_bg { color:#ffffff; }
+.google_color_border { color:#ffffff; }
+
+/* comment */
+
+.commentshort p {
+  position:relative;
+}
+
+.commentshort p .timestamp {
+  position:absolute;
+  right:0;
+ _right:255px;
+ *right:255px;
+  top:0;
+}
+
+/* fotolife max-width */
+
+div.section img.hatena-fotolife{
+  max-width:870px;
+}
+
+div.main div.section img.hatena-fotolife{
+  max-width:640px;
+}
+
+/* tweet */  
+
+div.twitter-tweet, 
+div.twitter-detail {
+  margin-top:0;
+  margin-bottom:0;
+  border-bottom:1px solid #e5ebfa;
+}
+
+div.twitter-tweet p.twitter-tweet-text, 
+div.twitter-detail p.twitter-detail-text {
+  margin:0;
+  padding-top:7px;
+}
+
+div.twitter-tweet p.twitter-tweet-info, 
+div.twitter-detail p.twitter-detail-info {
+  color:#999999;
+  font-size:80%;
+  padding-top:0;
+  padding-bottom:6px;
+}
+div.twitter-detail div.twitter-detail-user img {
+  margin-top:6px;
+}
+
+div.twitter-tweet p.twitter-tweet-info a, 
+div.twitter-detail p.twitter-detail-info a{
+  color:#999999;
+  text-decoration:none;
+}
+
+div.twitter-tweet p.twitter-tweet-info a:hover, 
+div.twitter-detail p.twitter-detail-info a:hover{
+  text-decoration:underline;
+}
