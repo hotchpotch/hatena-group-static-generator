@@ -5,6 +5,9 @@
  */
 
 module.exports = {
+  siteMetadata: {
+    title: `SubTech - secondlife`,
+  },
   plugins: [
     'gatsby-plugin-eslint',
     {
