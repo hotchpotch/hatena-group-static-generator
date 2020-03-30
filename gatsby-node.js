@@ -49,9 +49,14 @@ exports.onCreateNode = async (
                 });
                 const body = html.toString();
                 const text = html.text;
-                const mdNodeContent = {
-                    ...entries,
+                const comments = entry.comments.map((comment) => ({
+                    author: comment.author,
+                    date: new Date(comment.date * 1000),
+                    text: htmlUnescape(comment.text.join("\n")),
+                }));
+                const content = {
                     id: String(entry.date),
+                    comments,
                     children: [],
                     title: htmlUnescape(entry.title),
                     date: new Date(entry.date * 1000),
@@ -62,7 +67,7 @@ exports.onCreateNode = async (
                         type: 'HatenaGroupContent',
                     },
                 }
-                createNode(mdNodeContent);
+                createNode(content);
             }
         });
     }
