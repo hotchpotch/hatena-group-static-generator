@@ -40,7 +40,13 @@ exports.onCreateNode = async (
             if (entry.status === 'Publish') {
                 // const raw = entry.body[0] + "\n" + entry.body.slice(2).join("\n");
                 const raw = entry.body.join("\n");
-                const html = HTMLParser.parse(raw);
+                const html = HTMLParser.parse(raw, {
+                    lowerCaseTagName: false,
+                    script: false,
+                    style: true,
+                    pre: true,
+                    comment: true
+                });
                 const body = html.toString();
                 const text = html.text;
                 const mdNodeContent = {
