@@ -10,8 +10,6 @@ module.exports = {
     groupName: 'subtech',
   },
   plugins: [
-    'gatsby-plugin-eslint',
-    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -19,5 +17,7 @@ module.exports = {
         name: `hatena-group`,
       },
     },
+    'gatsby-plugin-eslint',
+    `gatsby-plugin-react-helmet`,
   ]
 }

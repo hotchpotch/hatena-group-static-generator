@@ -65,12 +65,16 @@ exports.createPages = async ({ graphql, actions }) => {
     const contents = result.data.allHatenaGroupContent.edges
 
     // Entry Page ( /142201221 )
-    contents.forEach(({ node }) => {
+    contents.forEach(({ node }, index) => {
+        const prevId = index === contents.length - 1 ? null : contents[index + 1].node.id
+        const nextId = index === 0 ? null : contents[index - 1].node.id
         createPage({
             path: '/' + node.id,
             component: path.resolve(`./src/templates/hatena-group-entry.js`),
             context: {
                 id: node.id,
+                prevId,
+                nextId,
             },
         })
     })
