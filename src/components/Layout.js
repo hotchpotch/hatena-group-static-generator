@@ -26,7 +26,7 @@ export default ({ children, pagination }) => {
     const { prev, next } = pagination || {};
     const pager = <>
         {prev &&
-            <Link to={prev.path} alt={next.label} title={next.title} className="prev">{"<" + truncate(prev.label)}</Link>
+            <Link to={prev.path} alt={prev.label} title={prev.title} className="prev">{"<" + truncate(prev.label)}</Link>
         }
         {prev && next &&
             <span className="delimiter"> | </span>
