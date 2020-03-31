@@ -2,7 +2,7 @@ import React from "react"
 import SimpleHeader from "./SimpleHeader";
 import { useStaticQuery, Link, graphql } from "gatsby"
 
-export default ({ children }) => {
+export default ({ children, pagination }) => {
     const data = useStaticQuery(
         graphql`
       query {
@@ -14,6 +14,18 @@ export default ({ children }) => {
       }
     `
     )
+    const { prev, next } = pagination || {};
+    const pager = <>
+        {prev &&
+            <Link to={prev.path} className="prev">{prev.label}</Link>
+        }
+        {prev && next &&
+            <span class="delimiter">|</span>
+        }
+        {next &&
+            <Link to={next.path} className="next">{next.label}</Link>
+        }
+    </>;
     return (
         <>
             <SimpleHeader />
@@ -24,13 +36,13 @@ export default ({ children }) => {
             </h1>
             <div className="hatena-body">
                 <div className="calendar" id="pager-top">
-                    <a rel="prev" href="/" className="prev">&lt;前の5日分</a><span id="edit-in-place-add"></span>
+                    {pager}
                 </div>
                 <div id="days">
                     {children}
                 </div>
                 <div className="calendar" id="pager-bottom">
-                    <a rel="prev" href="/" className="prev">&lt;前の5日分</a>
+                    {pager}
                 </div>
             </div>
         </>

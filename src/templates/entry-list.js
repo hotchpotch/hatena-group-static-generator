@@ -4,9 +4,28 @@ import Layout from "../components/Layout";
 import Entry from "../components/Entry";
 import Helmet from "react-helmet";
 
-export default ({ data }) => {
+function createPagination({ totalPageCount, currentPage, limit }) {
+    const perPage = limit;
+    const prev = {
+        path: `/archives/${currentPage - 1}`,
+        label: `<前の${perPage}日分`,
+    }
+    const next = {
+        path: `/archives/${currentPage + 1}`,
+        label: `次の${perPage}日分>`,
+    }
+    if (currentPage === totalPageCount) {
+        return { prev }
+    }
+    if (currentPage === 1) {
+        return { next }
+    }
+    return { next, prev }
+}
+
+export default ({ data, pageContext }) => {
     return (
-        <Layout>
+        <Layout pagination={createPagination(pageContext)}>
             <Helmet>
                 <title>{data.site.siteMetadata.title}</title>
             </Helmet>

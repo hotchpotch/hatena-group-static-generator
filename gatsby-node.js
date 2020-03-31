@@ -78,14 +78,15 @@ exports.createPages = async ({ graphql, actions }) => {
     // List Page ( root(/) && /archives/2 )
     const totalPageCount = Math.ceil(contents.length / perPage)
     Array.from({ length: totalPageCount }).forEach((_, i) => {
+        const currentPage = i + 1;
         createPage({
-            path: i === 0 ? `/` : `/archives/${i + 1}`,
+            path: i === 0 ? `/` : `/archives/${currentPage}`,
             component: path.resolve("./src/templates/entry-list.js"),
             context: {
                 limit: perPage,
                 skip: i * perPage,
                 totalPageCount,
-                currentPage: i + 1,
+                currentPage,
             },
         })
     })
