@@ -5,12 +5,13 @@ import { graphql } from "gatsby"
 import Entry from "../components/Entry"
 import Layout from "../components/Layout"
 
-export default ({ data }) => {
+export default ({ data, pageContext }) => {
   const { id, content, title, date, comments } = data.hatenaGroupContent;
   const headTitle = `${title} - ${data.site.siteMetadata.title}`
+  const pagination = { next: pageContext.next, prev: pageContext.prev };
 
   return (
-    <Layout>
+    <Layout pagination={pagination}>
       <Helmet>
         <title>{headTitle}</title>
       </Helmet>

@@ -8,11 +8,11 @@ function createPagination({ totalPageCount, currentPage, limit }) {
     const perPage = limit;
     const prev = {
         path: `/archives/${currentPage - 1}`,
-        label: `<前の${perPage}日分`,
+        label: `前の${perPage}日分`,
     }
     const next = {
         path: `/archives/${currentPage + 1}`,
-        label: `次の${perPage}日分>`,
+        label: `次の${perPage}日分`,
     }
     if (currentPage === totalPageCount) {
         return { prev }

@@ -17,13 +17,13 @@ export default ({ children, pagination }) => {
     const { prev, next } = pagination || {};
     const pager = <>
         {prev &&
-            <Link to={prev.path} className="prev">{prev.label}</Link>
+            <Link to={prev.path} className="prev">{"<" + prev.label}</Link>
         }
         {prev && next &&
-            <span class="delimiter">|</span>
+            <span class="delimiter"> | </span>
         }
         {next &&
-            <Link to={next.path} className="next">{next.label}</Link>
+            <Link to={next.path} className="next">{next.label + ">"}</Link>
         }
     </>;
     return (

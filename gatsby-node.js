@@ -67,6 +67,7 @@ exports.createPages = async ({ graphql, actions }) => {
         edges {
           node {
             id
+            title
           }
         }
       }
@@ -76,15 +77,25 @@ exports.createPages = async ({ graphql, actions }) => {
 
     // Entry Page ( /142201221 )
     contents.forEach(({ node }, index) => {
-        const prevId = index === contents.length - 1 ? null : contents[index + 1].node.id
-        const nextId = index === 0 ? null : contents[index - 1].node.id
+        const nav = {};
+        if (index !== contents.length - 1) {
+            nav.prev = {
+                path: '/' + contents[index + 1].node.id,
+                label: contents[index + 1].node.title,
+            }
+        }
+        if (index !== 0) {
+            nav.next = {
+                path: '/' + contents[index - 1].node.id,
+                label: contents[index - 1].node.title,
+            }
+        }
         createPage({
             path: '/' + node.id,
             component: path.resolve(`./src/templates/hatena-group-entry.js`),
             context: {
                 id: node.id,
-                prevId,
-                nextId,
+                ...nav,
             },
         })
     })
