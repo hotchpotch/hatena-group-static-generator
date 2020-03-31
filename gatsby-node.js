@@ -32,7 +32,9 @@ exports.onCreateNode = async (
                     comment: true
                 });
                 const body = html.toString();
-                const text = html.text;
+                const text = html.text
+                    // <span class="synPreProc">textNode</span> などを textNode のみに
+                    .replace(/<.+?>(.*?)<\/.+?>/mg, (_, text) => text);
                 const comments = entry.comments.map((comment) => ({
                     author: comment.author,
                     date: new Date(comment.date * 1000),
@@ -45,7 +47,7 @@ exports.onCreateNode = async (
                     title: htmlUnescape(entry.title),
                     date: new Date(entry.date * 1000),
                     content: body,
-                    text: text,
+                    text,
                     internal: {
                         contentDigest: createContentDigest(body),
                         type: 'HatenaGroupContent',

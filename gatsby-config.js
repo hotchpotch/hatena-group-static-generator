@@ -6,7 +6,7 @@
 
 module.exports = {
   siteMetadata: {
-    title: `Hatena::Group::SubTech id:secondlife`,
+    title: `#生存戦略、それは`,
     groupName: 'subtech',
   },
   plugins: [
@@ -26,15 +26,15 @@ module.exports = {
           },
         ],
         fields: [
-          { name: 'title', store: true, attributes: { boost: 20 } },
-          { name: 'content', store: true },
-          { id: 'id', store: true },
+          { name: 'title', store: true },// attributes: { boost: 20 } },
+          { name: 'text', store: true },
+          { name: 'url', store: true },
         ],
         resolvers: {
           HatenaGroupContent: {
             title: node => node.title,
-            content: node => node.text,
-            id: node => node.id,
+            text: node => node.text,
+            url: node => '/' + node.id,
           },
         },
         //custom index file name, default is search_index.json

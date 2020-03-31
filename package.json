@@ -19,6 +19,8 @@
     "gatsby-plugin-lunr": "^1.5.2",
     "gatsby-plugin-react-helmet": "^3.2.1",
     "gatsby-source-filesystem": "^2.2.2",
+    "install": "^0.13.0",
+    "lunr-languages": "^1.4.0",
     "mt-parser": "^1.0.0-alpha.6",
     "node-html-parser": "^1.2.13",
     "react": "^16.12.0",
