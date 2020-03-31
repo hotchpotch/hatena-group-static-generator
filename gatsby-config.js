@@ -28,14 +28,14 @@ module.exports = {
         fields: [
           { name: 'title', store: true, attributes: { boost: 10 } },
           // { name: 'text', store: false },
-          { name: 'url', store: true },
+          { name: 'id', store: true },
         ],
         resolvers: {
           HatenaGroupContent: {
             title: node => node.title,
             // テキストを全文検索するとファイルが巨大になるので利用しない
             // text: node => node.searchText,
-            url: node => '/' + node.id,
+            id: node => node.id,
           },
         },
         filename: 'search_index.json',

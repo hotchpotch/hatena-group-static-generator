@@ -32,13 +32,12 @@ const Search = () => {
                     setQuery(event.target.value)
                 }}
             />
-            {results.map(({ url, title, text }) => {
+            {results.map(({ id, title }) => {
                 return (
-                    <div key={url}>
+                    <div key={id}>
                         <h3>
-                            <Link to={url}>{title}</Link>
+                            <Link to={'/' + id}>{title}</Link>
                         </h3>
-                        <p>{text}</p>
                     </div>
                 )
             })}
