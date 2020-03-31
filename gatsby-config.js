@@ -27,19 +27,18 @@ module.exports = {
         ],
         fields: [
           { name: 'title', store: true, attributes: { boost: 10 } },
-          { name: 'text', store: false },
+          // { name: 'text', store: false },
           { name: 'url', store: true },
         ],
         resolvers: {
           HatenaGroupContent: {
             title: node => node.title,
-            text: node => node.searchText,
+            // テキストを全文検索するとファイルが巨大になるので利用しない
+            // text: node => node.searchText,
             url: node => '/' + node.id,
           },
         },
-        //custom index file name, default is search_index.json
         filename: 'search_index.json',
-        //custom options on fetch api call for search_ındex.json
         fetchOptions: {
           credentials: 'same-origin'
         },
