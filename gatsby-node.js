@@ -2,8 +2,8 @@ const path = require(`path`)
 const mtParser = require('mt-parser');
 const HTMLParser = require('node-html-parser');
 const { htmlUnescape } = require('escape-goat');
-const { perPage } = require('./src/Contants');
 
+const PER_PAGE = 5;
 const DEV_MAX_ENTRIES = 30;
 
 // XXX: .cache/redux/ があると、onCreateNode がうまく呼ばれない
@@ -101,15 +101,15 @@ exports.createPages = async ({ graphql, actions }) => {
     })
 
     // List Page ( root(/) && /archives/2 )
-    const totalPageCount = Math.ceil(contents.length / perPage)
+    const totalPageCount = Math.ceil(contents.length / PER_PAGE)
     Array.from({ length: totalPageCount }).forEach((_, i) => {
         const currentPage = i + 1;
         createPage({
             path: i === 0 ? `/` : `/archives/${currentPage}`,
             component: path.resolve("./src/templates/entry-list.js"),
             context: {
-                limit: perPage,
-                skip: i * perPage,
+                limit: PER_PAGE,
+                skip: i * PER_PAGE,
                 totalPageCount,
                 currentPage,
             },

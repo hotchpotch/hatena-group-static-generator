@@ -1,2 +1,0 @@
-
-exports.perPage = 5
