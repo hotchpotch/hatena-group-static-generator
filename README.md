@@ -57,7 +57,7 @@ yarn serve
 ```
 
 ```
-# 後悔するため、適当にどこかに静的ファイルをdeployする。例えば surge なら…
+# 公開するため、適当にどこかに静的ファイルをdeployする。例えば surge なら…
 surge public
 ```
 
