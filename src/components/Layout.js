@@ -2,6 +2,15 @@ import React from "react"
 import SimpleHeader from "./SimpleHeader";
 import { useStaticQuery, Link, graphql } from "gatsby"
 
+function truncate(str, length = 30) {
+    if (str.length > length) {
+        return str.substr(0, length) + '...';
+    } else {
+        return str;
+    }
+
+}
+
 export default ({ children, pagination }) => {
     const data = useStaticQuery(
         graphql`
@@ -17,13 +26,13 @@ export default ({ children, pagination }) => {
     const { prev, next } = pagination || {};
     const pager = <>
         {prev &&
-            <Link to={prev.path} className="prev">{"<" + prev.label}</Link>
+            <Link to={prev.path} alt={next.label} title={next.title} className="prev">{"<" + truncate(prev.label)}</Link>
         }
         {prev && next &&
-            <span class="delimiter"> | </span>
+            <span className="delimiter"> | </span>
         }
         {next &&
-            <Link to={next.path} className="next">{next.label + ">"}</Link>
+            <Link to={next.path} alt={next.label} title={next.title} className="next">{truncate(next.label) + ">"}</Link>
         }
     </>;
     return (
