@@ -3,7 +3,7 @@ const mtParser = require('mt-parser');
 const HTMLParser = require('node-html-parser');
 const { htmlUnescape } = require('escape-goat');
 
-const PER_PAGE = 5;
+const PER_PAGE = 7;
 const DEV_MAX_ENTRIES = 30;
 
 // XXX: .cache/redux/ があると、onCreateNode がうまく呼ばれない

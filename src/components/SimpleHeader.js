@@ -8,7 +8,6 @@ export default () => (
         <HeaderImages />
         <SearchHeader />
         <ul className="menu">
-            <li><Link to="/">トップ</Link></li>
             <li><Link to="/">最新の日記</Link></li>
         </ul>
     </div>
