@@ -11,7 +11,7 @@ Hatena::Group Static Site Generator
 
 - 例: https://subtech-secondlife.netlify.com/
 
-のように、はてなグループで書いた記事を公開することができます。静的ファイルなので、動的なアプリケーションサーバは必要なく、Netlify, Surge, Firebase Hosting 等にデプロイすることで、サーバ料金はかからず基本的には無料でどこかに公開ができます。
+のように、はてなグループで書いた記事を公開することができます。静的ファイルなので、動的なアプリケーションサーバは必要なく、Netlify, Surge, Firebase Hosting 等にデプロイすることで、サーバ料金は基本かからずに公開ができます。
 
 ## 使い方
 
@@ -20,9 +20,12 @@ node.js と yarn が必要です。
 ```
 git clone https://github.com/hotchpotch/hatena-group-static-generator
 cd hatena-group-static-generator
+cp site-settings.js.sample site-settings.js
+# 適当にいじる
+vim site-settings.js
 # 依存ライブラリのインストール
 yarn
-# export した  .mt (MovableType) 形式のファイルがある場合は ./hatena-group-exports/ 以下に配置する
+# export した .mt (MovableType) 形式のファイルを ./hatena-group-exports/ 以下に配置する
 cp {あなたのエクスポートしたファイル}.mt ./hatena-group-exports/
 # 試しに適当なブログを生成してみたい場合
 ```
