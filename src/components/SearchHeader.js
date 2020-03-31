@@ -12,6 +12,10 @@ const SearchHeader = () => {
                 return
             }
             const lunrIndex = window.__LUNR__['ja']
+            if (!lunrIndex.index) {
+                setResults([])
+                return
+            }
             const searchResults = lunrIndex.index.search(query)
             setResults(
                 searchResults.map(({ ref }) => {
