@@ -1,2 +1,2 @@
 
-export const perPage = 5
+exports.perPage = 5

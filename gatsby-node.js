@@ -2,6 +2,7 @@ const path = require(`path`)
 const mtParser = require('mt-parser');
 const HTMLParser = require('node-html-parser');
 const { htmlUnescape } = require('escape-goat');
+const { perPage } = require('./src/Contants');
 
 exports.onCreateNode = async (
     { node, actions, loadNodeContent, createContentDigest }
@@ -59,15 +60,32 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
-    }
-  `)
+    }`);
 
-    result.data.allHatenaGroupContent.edges.forEach(({ node }) => {
+    const contents = result.data.allHatenaGroupContent.edges
+
+    // Entry Page ( /142201221 )
+    contents.forEach(({ node }) => {
         createPage({
             path: '/' + node.id,
             component: path.resolve(`./src/templates/hatena-group-entry.js`),
             context: {
                 id: node.id,
+            },
+        })
+    })
+
+    // List Page ( root(/) && /archives/2 )
+    const totalPageCount = Math.ceil(contents.length / perPage)
+    Array.from({ length: totalPageCount }).forEach((_, i) => {
+        createPage({
+            path: i === 0 ? `/` : `/archives/${i + 1}`,
+            component: path.resolve("./src/templates/entry-list.js"),
+            context: {
+                limit: perPage,
+                skip: i * perPage,
+                totalPageCount,
+                currentPage: i + 1,
             },
         })
     })
