@@ -7,7 +7,7 @@ import Helmet from "react-helmet";
 function createPagination({ totalPageCount, currentPage, limit }) {
     const perPage = limit;
     const prev = {
-        path: `/archives/${currentPage - 1}`,
+        path: currentPage === 2 ? '/' : `/archives/${currentPage - 1}`,
         label: `前の${perPage}日分`,
     }
     const next = {
@@ -24,10 +24,11 @@ function createPagination({ totalPageCount, currentPage, limit }) {
 }
 
 export default ({ data, pageContext }) => {
+    const { title, groupName } = data.site.siteMetadata;
     return (
         <Layout pagination={createPagination(pageContext)}>
             <Helmet>
-                <title>{data.site.siteMetadata.title}</title>
+                <title>{title} - {groupName}</title>
             </Helmet>
             {data.allHatenaGroupContent.edges.map(({ node }) =>
                 <Entry key={node.id} {...node} />
@@ -62,6 +63,7 @@ export const query = graphql`
     site {
       siteMetadata {
         title
+        groupName
       }
     }
   }
