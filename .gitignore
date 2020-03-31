@@ -68,4 +68,8 @@ yarn-error.log
 # Yarn Integrity file
 .yarn-integrity
 
+# exported .mt files
 hatena-group-exports/*.mt
+
+# Local Netlify folder
+.netlify
