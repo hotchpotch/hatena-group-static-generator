@@ -16,6 +16,7 @@
   "dependencies": {
     "escape-goat": "^3.0.0",
     "gatsby": "^2.19.45",
+    "gatsby-plugin-lunr": "^1.5.2",
     "gatsby-plugin-react-helmet": "^3.2.1",
     "gatsby-source-filesystem": "^2.2.2",
     "mt-parser": "^1.0.0-alpha.6",
