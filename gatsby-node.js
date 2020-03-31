@@ -6,10 +6,15 @@ const { perPage } = require('./src/Contants');
 
 const DEV_MAX_ENTRIES = 30;
 
+// XXX: .cache/redux/ があると、onCreateNode がうまく呼ばれない
 exports.onCreateNode = async (
     { node, actions, loadNodeContent, createContentDigest }
 ) => {
-    if (node.internal.type === 'File' && node.ext === '.mt') {
+    if (node.internal.type !== 'File' || node.ext !== '.mt') {
+        return;
+    }
+
+    try {
         const { createNode } = actions;
         const nodeContent = await loadNodeContent(node);
         const parsed = mtParser.parse(nodeContent);
@@ -49,6 +54,8 @@ exports.onCreateNode = async (
                 createNode(content);
             }
         });
+    } catch (e) {
+        console.error('onCreateNode Error:', e);
     }
 }
 

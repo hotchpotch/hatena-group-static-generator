@@ -5,8 +5,8 @@
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
-    "build": "rm -rf .cache;gatsby build",
-    "develop": "rm -rf .cache;gatsby develop",
+    "build": "rm -rf .cache/redux/;gatsby build",
+    "develop": "rm -rf .cache/redux/;gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
