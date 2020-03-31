@@ -7,8 +7,8 @@
   "scripts": {
     "build": "rm -rf .cache/redux/;gatsby build",
     "develop": "rm -rf .cache/redux/;gatsby develop",
+    "create-dummy": "ruby ./script/create_dummy.rb > ./hatena-group-exports/dummy.mt",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
