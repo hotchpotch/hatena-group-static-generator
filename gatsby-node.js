@@ -40,6 +40,7 @@ exports.onCreateNode = async (
                     date: new Date(comment.date * 1000),
                     text: htmlUnescape(comment.text.join("\n")),
                 }));
+                const commentsText = comments.map(({ author, text }) => `${author}\n${text}`).join("\n");
                 const content = {
                     id: String(entry.date),
                     comments,
@@ -47,7 +48,7 @@ exports.onCreateNode = async (
                     title: htmlUnescape(entry.title),
                     date: new Date(entry.date * 1000),
                     content: body,
-                    text,
+                    searchText: text + "\n" + commentsText,
                     internal: {
                         contentDigest: createContentDigest(body),
                         type: 'HatenaGroupContent',

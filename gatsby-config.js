@@ -33,7 +33,7 @@ module.exports = {
         resolvers: {
           HatenaGroupContent: {
             title: node => node.title,
-            text: node => node.text,
+            text: node => node.searchText,
             url: node => '/' + node.id,
           },
         },
