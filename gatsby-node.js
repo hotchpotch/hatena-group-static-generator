@@ -2,8 +2,9 @@ const path = require(`path`)
 const mtParser = require('mt-parser');
 const HTMLParser = require('node-html-parser');
 const { htmlUnescape } = require('escape-goat');
+const { perPage } = require('./site-settings');
 
-const PER_PAGE = 7;
+const PER_PAGE = perPage;
 const DEV_MAX_ENTRIES = 30;
 
 // XXX: .cache/redux/ があると、onCreateNode がうまく呼ばれない

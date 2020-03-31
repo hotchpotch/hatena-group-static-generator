@@ -4,10 +4,12 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
+const siteSettings = require('./site-settings');
+
 module.exports = {
   siteMetadata: {
-    title: `#生存戦略、それは`,
-    groupName: 'subtech',
+    title: siteSettings.blogTitle,
+    groupName: siteSettings.groupName,
   },
   plugins: [
     {
