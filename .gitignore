@@ -73,3 +73,6 @@ hatena-group-exports/*.mt
 
 # Local Netlify folder
 .netlify
+
+# setting file
+site-settings.js
