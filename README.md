@@ -37,7 +37,7 @@ yarn
 # export した .mt (MovableType) 形式のファイルを ./hatena-group-exports/ 以下に配置する
 cp {あなたのエクスポートしたファイル}.mt ./hatena-group-exports/
 # 動作のため、試しに適当な .mt 形式のファイルを生成してみたい場合
-# ./hatena-group-exports/dummy.mt は削除すること
+# ./hatena-group-exports/dummy.mt は利用が終わったら削除すること
 yarn create-dummy
 ```
 
