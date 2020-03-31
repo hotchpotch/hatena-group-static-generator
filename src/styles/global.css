@@ -1,3 +1,17 @@
 .share-button {
   display: none;
 }
+
+.site-generator--footer {
+  text-align: center;
+  font-size: 0.7em;
+  height: 30px;
+  margin: 30px;
+  color: #999;
+}
+
+.site-generator--footer a,
+.site-generator--footer a:hover,
+.site-generator--footer a:visited {
+  color: #999;
+}
