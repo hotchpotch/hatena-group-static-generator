@@ -21,14 +21,23 @@ node.js と yarn が必要です。
 git clone https://github.com/hotchpotch/hatena-group-static-generator
 cd hatena-group-static-generator
 cp site-settings.js.sample site-settings.js
-# 適当にいじる
+# タイトルなど、適当に設定いじる
 vim site-settings.js
 # 依存ライブラリのインストール
 yarn
 # export した .mt (MovableType) 形式のファイルを ./hatena-group-exports/ 以下に配置する
 cp {あなたのエクスポートしたファイル}.mt ./hatena-group-exports/
-# 試しに適当なブログを生成してみたい場合
-
+# 動作のため、試しに適当な .mt 形式のファイルを生成してみたい場合
+# ./hatena-group-exports/dummy.mt は削除すること
+yarn create-dummy
+# 開発サーバを立ち上げて http://localhost:8000/ でアクセス
+yarn develop
+# リリース用静的ファイルを ./public に作る
+yarn build
+# public 以下のファイルで動作確認する
+yarn serve
+# 適当にどこかに静的ファイルをリリース、例えば surge なら…
+surge public
 ```
 
 ## 解っている問題点
