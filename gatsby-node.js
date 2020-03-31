@@ -4,13 +4,16 @@ const HTMLParser = require('node-html-parser');
 const { htmlUnescape } = require('escape-goat');
 const { perPage } = require('./src/Contants');
 
+const DEV_MAX_ENTRIES = 30;
+
 exports.onCreateNode = async (
     { node, actions, loadNodeContent, createContentDigest }
 ) => {
     if (node.internal.type === 'File' && node.ext === '.mt') {
         const { createNode } = actions;
         const nodeContent = await loadNodeContent(node);
-        const entries = mtParser.parse(nodeContent).slice(0, 20);
+        const parsed = mtParser.parse(nodeContent);
+        const entries = process.env.NODE_ENV === 'production' ? parsed : parsed.slice(0, DEV_MAX_ENTRIES);
 
         entries.forEach((entry) => {
             if (entry.status === 'Publish') {
