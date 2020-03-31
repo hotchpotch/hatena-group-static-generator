@@ -26,8 +26,8 @@ module.exports = {
           },
         ],
         fields: [
-          { name: 'title', store: true },// attributes: { boost: 20 } },
-          { name: 'text', store: true },
+          { name: 'title', store: true, attributes: { boost: 10 } },
+          { name: 'text', store: false },
           { name: 'url', store: true },
         ],
         resolvers: {
