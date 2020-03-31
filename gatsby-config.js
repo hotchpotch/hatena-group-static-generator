@@ -10,6 +10,7 @@ module.exports = {
   siteMetadata: {
     title: siteSettings.blogTitle,
     groupName: siteSettings.groupName,
+    siteUrl: siteSettings.siteUrl,
   },
   plugins: [
     {
@@ -46,7 +47,8 @@ module.exports = {
         },
       },
     },
-    'gatsby-plugin-eslint',
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
+    'gatsby-plugin-eslint',
   ]
 }

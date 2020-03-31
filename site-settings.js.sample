@@ -4,6 +4,8 @@ const settings = {
   blogTitle: '#生存戦略、それは',
   // 利用していたはてなグループ
   groupName: 'subtech',
+  // 主に sitemap.xml を生成する時に使われる URL
+  siteUrl: `https://subtech-secondlife.netlify.com`,
   // リスト表示で何日分の日記を表示するか
   perPage: 7,
 };
