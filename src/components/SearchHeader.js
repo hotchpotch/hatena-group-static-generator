@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Link } from 'gatsby'
 
 const SearchHeader = () => {
-    const [query, setQuery] = useState(`github`)
+    const [query, setQuery] = useState(``)
     const [results, setResults] = useState([])
 
     useEffect(
