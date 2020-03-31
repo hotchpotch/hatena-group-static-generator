@@ -15,3 +15,42 @@
 .site-generator--footer a:visited {
   color: #999;
 }
+
+.site-generator--search-result {
+  position: absolute;
+  display: block;
+  overflow: scroll;
+  top: 32px;
+  left: 16px;
+  width: 600px;
+  height: auto;
+  border: 1px solid #4a5973;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 4px;
+}
+
+.site-generator--search-result-list a,
+.site-generator--search-result-list a:hover,
+.site-generator--search-result-list a:visited {
+  display: inline-block;
+  padding: 0 10px;
+  width: 100%;
+  color: #333;
+  font-size: 0.9em;
+}
+
+.site-generator--search-result-not-found {
+  padding: 0 10px;
+  margin: 8px 0 6px 0;
+  width: 100%;
+  color: #333;
+  font-size: 0.8em;
+}
+
+.site-generator--search-result-message {
+  margin: 0;
+  padding: 4px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #ccc;
+}
