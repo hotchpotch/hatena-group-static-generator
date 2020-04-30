@@ -4,7 +4,7 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
-const siteSettings = require('./site-settings');
+const siteSettings = require("./site-settings")
 
 module.exports = {
   siteMetadata: {
@@ -13,6 +13,14 @@ module.exports = {
     siteUrl: siteSettings.siteUrl,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-typescript`,
+      options: {
+        //        isTSX: true, // defaults to false
+        // jsxPragma: `jsx`, // defaults to "React"
+        // allExtensions: true, // defaults to false
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -25,13 +33,13 @@ module.exports = {
       options: {
         languages: [
           {
-            name: 'ja',
+            name: "ja",
           },
         ],
         fields: [
-          { name: 'title', store: true, attributes: { boost: 10 } },
+          { name: "title", store: true, attributes: { boost: 10 } },
           // { name: 'text', store: false },
-          { name: 'id', store: true },
+          { name: "id", store: true },
         ],
         resolvers: {
           HatenaGroupContent: {
@@ -41,14 +49,14 @@ module.exports = {
             id: node => node.id,
           },
         },
-        filename: 'search_index.json',
+        filename: "search_index.json",
         fetchOptions: {
-          credentials: 'same-origin'
+          credentials: "same-origin",
         },
       },
     },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
-    'gatsby-plugin-eslint',
-  ]
+    "gatsby-plugin-eslint",
+  ],
 }
