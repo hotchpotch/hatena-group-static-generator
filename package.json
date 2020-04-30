@@ -5,12 +5,12 @@
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
-    "build": "rm -rf .cache/redux/;gatsby build",
-    "develop": "rm -rf .cache/redux/;gatsby develop",
+    "build": "rm -rf .cache/redux/;npx gatsby build",
+    "develop": "rm -rf .cache/redux/;npx gatsby develop",
     "create-dummy": "ruby ./script/create_dummy.rb > ./hatena-group-exports/dummy.mt",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
+    "serve": "npx gatsby serve",
+    "clean": "npx gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
