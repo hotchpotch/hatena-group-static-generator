@@ -9,7 +9,7 @@ Hatena::Group Static Site Generator
 
 サービスが終了したはてなグループの `.mt` 形式のエクスポートデータを元に、静的ファイルを出力できるジェネレータです。
 
-- 例: https://subtech-secondlife.netlify.com/
+- 例: <del>https://subtech-secondlife.netlify.com/</del>
 
 のように、はてなグループで書いた記事を公開することができます。静的ファイルなので、動的なアプリケーションサーバは必要なく、Netlify, Surge, Firebase Hosting 等にデプロイすることで、サーバ料金は基本かからずに公開ができます。
 
